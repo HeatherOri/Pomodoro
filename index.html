@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>POMODORO</title>
+</head>
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<input type="checkbox" name="" id="switchtoMainPage">
+<div id="index">
+        <div class="content">
+            <div class="main-content-row">
+                <div class="logo">
+                    <div class="title">POMODORO</div>
+                    <img src="image/icons/tomato_small_color.svg" alt="logo" width= 250px>
+                    <div class="h3">Start your to-do list here!</div>
+                </div>
+                <label id="startbutton" for="switchtoMainPage">PRESS START</label>
+                <div class="footer">POMODORO</div>
+            </div>
+        </div>
+</div>
+    <div id="main">
+        <div class="content">
+            <div class="main-content-row">
+                <div class="chartCard">
+                    <div id="ClockTitle">
+                        <div id = "listName" class="h1">Please Choose a Task</div>
+                    </div>
+<!--                     <ul class="smallRedCircle">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul> -->
+                  <div class="chartBox">
+                    <canvas id="myChart"></canvas>
+                    <br>
+                    <div id="TimerButton" class="clearfix">
+                        <button id="startbg"><img src="image/icons/start_gray.svg" alt="start"></button>
+                        <button id="pausebg"><img src="image/icons/pause_gray.svg" alt="pause"></button>
+                        <button id="resetbg"><img src="image/icons/reset_gray.svg" alt="reset"></button>
+                        <div id="TimerButtonCover" class="clearfix">
+                            <button id="start"><img src="image/icons/start_red.svg" alt="start"></button>
+                            <button id="pause" disabled=""><img src="image/icons/pause_red.svg" alt="pause"></button>
+                            <button id="reset" disabled=""><img src="image/icons/reset_red.svg" alt="reset"></button>
+                        </div>
+                    </div>
+                    <div id="setTimer">
+                        <input id= "setWorkTime" type="number" name="" value="25">
+                    </div>
+                    <div>
+                        <button id="breakBtn" disabled="" for="switchTimer">Take a Break</button>
+                    </div>
+                    <div class="footer">POMODORO</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<input type="checkbox" name="" id="sidebarSwitch">
+    <div id="sidebar">
+        <div id="nav" for ="sidebarSwitch" class="clearfix">
+<!--             <div class="icon" for ="sidebarSwitch">
+                <button id="add_white"><img src="image/icons/add_white.svg" alt="add_white"></button>
+                <button id="list_white"><img src="image/icons/list_white.svg" alt="list_white"></button>
+                <button id="analysis_white"><img src="image/icons/analysis_white.svg" alt="analysis_white"></button>
+                <button id="ringtone_white"><img src="image/icons/ringtone_white.svg" alt="ringtone_white"></button>
+            </div>
+            <div class="iconCover" class="clearfix">
+                <button id="add_red"><img src="image/icons/add_red.svg" alt="add_red"></button>
+                <button id="list_red"><img src="image/icons/list_red.svg" alt="list_red"></button>
+                <button id="analysis_red"><img src="image/icons/analysis_red.svg" alt="analysis_red"></button>
+                <button id="ringtone_red"><img src="image/icons/ringtone_red.svg" alt="ringtone_red"></button>
+            </div> -->
+        </div>
+        <div id="addnewtask">
+            <div class="sidebartitle"><p>ADD NEW TASK</p></div>
+            <div class="h3"><p>TASK TITLE</p></div>
+            <input class="todo__input" type="text" placeholder="Add Here" minlength="1" maxlength="40">
+            <!-- <div class="h3">ESTIMATE TOMATO</div>
+            <div class="EstimatedTomato" class="clearfix">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+                <img src="image/icons/tomato_small_gray.svg" alt="s_tomato">
+            </div> -->
+            <!-- <input id= "setBreakTime" type="number" name="" value="0.2"> -->
+            <button class="AddTaskButton"><p>ADD TASK</p></button>
+            <div id="taskLists" class="sidebartitle"><p>TASK LISTS</p></div>
+            <ul id="listBoxes">
+             <!--    <li class="todo">
+                    <button calss="btn_delete">X</button>
+                    <label class="todo__title">
+                    <input class="todo__check" name= "radiobutton" type="radio" value=”radiobutton”>
+                    <p>Practice JS</p>
+                    </label>
+                </li> -->
+            </ul>
+
+        </div>
+        <label id="switchbtn" for ="sidebarSwitch">
+            <img src="image/icons/tomato_small_color.svg"><img id= arrow src="image/icons/arrow.svg">
+        </label>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="js/pomodoro_timer.js"></script>
+</body>
+</html>
