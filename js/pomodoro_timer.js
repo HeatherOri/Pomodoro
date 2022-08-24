@@ -63,17 +63,7 @@ function ClockEvent(){
             ctx.font = 'bolder 10px Arial';
             ctx.fillStyle = 'black';
             ctx.textAlign = 'center';
-            ctx.fillText("Time's Up!", width / 2, height / 2 + 70);
           }
-
-          /* if(time > 0){
-            ctx.font = 'bolder 10px Arial';
-            ctx.fillStyle = 'black';
-            ctx.textAlign = 'center';
-            ctx.fillText('Work', width / 2, height / 2 + 70);
-          } */
-
-
         }
 
     }
